@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/1e6eb7794e.js" crossorigin="anonymous"></script>
     <!-- CSS Link -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -32,7 +33,12 @@
         <div class="header__container">
             <div class="navbar__container">
                 <a class="logo" href="#"><img src="images/logo.svg" alt="Logo"></a>
-                <nav class="main__menu">
+                <div onclick="handleMenuToggle(this)" id="hamburger" class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="main__menu" id="menu">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Features</a></li>
@@ -48,15 +54,6 @@
             </div>
             <div class="banner__container">
                 <div class="banner__left">
-                    <div class="elipse"></div>
-                    <div class="cube">
-                        <div class="side top"></div>
-                        <div class="side left"></div>
-                        <div class="side front"></div>
-                    </div>
-                </div>
-                <div class="banner__center">
-                    <img src="images/cloud.png" alt="Cloud" class="cloud__image">
                     <h1 class="title">UltraAddons Best Elementor Widget Plugin</h1>
                     <div class="counters">
                         <div class="counter">
@@ -68,16 +65,20 @@
                             <p>Active Install</p>
                         </div>
                         <div class="counter">
-                            <h3>3004+</h3>
+                            <ul class="ratings">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
                             <p>Customer Rating</p>
                         </div>
                     </div>
                 </div>
                 <div class="banner__right">
                     <div class="banner__image">
-                        <img class="float__image" src="images/float.png" alt="float">
-                        <img class="computer__image" src="images/computer.png" alt="computer">
-                        <img class="hand__image" src="images/hand.png" alt="hand">
+                        <img src="images/Illustrations.png" alt="">
                     </div>
                 </div>
             </div>
@@ -137,7 +138,7 @@
         <!-- Start The Post Section -->
         <section class="post__container">
             <article class="post">
-                <img class="post__thumb" src="images/Illustrations-1.png" alt="">
+                <div class="post__thumb"><img src="images/Illustrations-1.png" alt=""></div>
                 <div class="post__info right">
                     <p class="subtitle">Templates For Every Niche</p>
                     <h2 class="title">Pre-built Templates And Blocks</h2>
@@ -160,10 +161,10 @@
                     <button class="view__allBtn">View All Features <img src="icons/arrow-right-icon.svg"
                             alt=""></button>
                 </div>
-                <img class="post__thumb" src="images/Illustrations-2.png" alt="">
+                <div class="post__thumb"><img src="images/Illustrations-2.png" alt=""></div>
             </article>
             <article class="post">
-                <img class="post__thumb" src="images/Illustrations-3.png" alt="">
+                <div class="post__thumb"><img src="images/Illustrations-3.png" alt=""></div>
                 <div class="post__info right">
                     <p class="subtitle">Floating Effect</p>
                     <h2 class="title">Give Floating Effects For Animations</h2>
@@ -186,7 +187,7 @@
                     <button class="view__allBtn">View All Features <img src="icons/arrow-right-icon.svg"
                             alt=""></button>
                 </div>
-                <img class="post__thumb" src="images/Illustrations-4.png" alt="">
+                <div  class="post__thumb"><img src="images/Illustrations-4.png" alt=""></div>
             </article>
         </section>
         <!-- Start The Element Section -->
@@ -198,18 +199,22 @@
             </div>
             <div class="elements">
                 <div class="element">
+                    <button class="free__badgeBtn">Free</button>
                     <img src="icons/element/woocommerce-eicon.svg" alt="" class="element__icon">
                     <p class="element__name">WooCommerce Products</p>
                 </div>
                 <div class="element">
+                    <button class="pro__badgeBtn">Free</button>
                     <img src="icons/element/adv-heading-eicon.svg" alt="" class="element__icon">
                     <p class="element__name">Advanced Heading</p>
                 </div>
                 <div class="element">
+                    <button class="free__badgeBtn">Free</button>
                     <img src="icons/element/recent-blog-eicon.svg" alt="" class="element__icon">
                     <p class="element__name">Recent Blog</p>
                 </div>
                 <div class="element">
+                    <button class="free__badgeBtn">Free</button>
                     <img src="icons/element/clock-eicon.svg" alt="" class="element__icon">
                     <p class="element__name">Countdown Timer</p>
                 </div>
@@ -440,6 +445,14 @@
             <p class="copyright__text">&copy; 2021, UltraAddons From CodeAstrology. All Right Reserved</p>
         </div>
     </footer>
+    <script>
+        const handleMenuToggle = () => {
+            const hamburger = document.getElementById("hamburger")
+            const menu = document.getElementById("menu")
+            menu.classList.toggle("show__main__menu")
+            hamburger.classList.toggle("hamburger__toggle")
+        }
+    </script>
 </body>
 
 </html>

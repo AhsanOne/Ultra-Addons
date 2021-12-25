@@ -1,3 +1,4 @@
+@media only screen and (min-width: 1920px) {
 /* Start Utility CSS */
 *{margin: 0; padding: 0;}
 body{font-family: 'Inter', sans-serif;}
@@ -102,20 +103,19 @@ ul{
 /* Header Section */
 .header{
     position: relative;
-    height: 100vh;
 }
 .header::before{
     content: "";
-    width: 23%;
+    width: 25%;
     height: 100%;
-    background-color: #FFD3DB;
+    background: #FFD3DB;
     position: absolute;
     right: 0;
     top: 0;
     z-index: -1;
 }
 .header__container{
-    padding: 40px 25px;
+    padding: 120px 0px 180px 0px;
 }
 .logo{
     display: flex;
@@ -124,6 +124,8 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 99px;
+    padding: 0px 50px;
 }
 .main__menu ul{
     display: flex;
@@ -158,130 +160,85 @@ ul{
 .banner__container{
     display: flex;
     justify-content: space-between;
-    padding-top: 120px;
+    padding: 0px 84px 0px 315px;
+    position: relative;
+}
+.banner__container::before{
+    content: url("../images/Banner-Abstract.png");
+    position: absolute;
+    left: 74px;
 }
 .banner__left{
-    position: relative;
-    width: 100px;
+    width: 50%;
 }
-.banner__left{
-    position: relative;
+
+.banner__left .title{
+    font-size: 80px;
+    line-height: 130px;
+    font-weight: 600;
+    margin-bottom: 60px;
 }
-.banner__left::before{
-    content: "";
-    position: absolute;
-    right: -100px;
-    top: -42px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #FFE4B7;
-}
-.banner__left .cube {
-    width: 79px;
-    height: 79px;
-    position: absolute;
-    bottom: -79px;
-    right: 0;
-    transform-style: preserve-3d;
-    transform: rotateX(240deg) rotateY(-5deg) rotateZ(-155deg);
-}
-  
-.banner__left .cube .side {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-  
-.banner__left .cube .top {
-    transform: translateZ(-79px);
-    background: #FFE8ED;
-}
-  
-.banner__left .cube .front {
-    transform: rotateX(90deg);
-    transform-origin: bottom;
-    background: #FAD5DF;
-}
-.banner__left .cube .left {
-    width: 79px;
-    transform: translateZ(-79px) rotateY(90deg);
-    transform-origin: right;
-    background: #FBC1D0;
-}
-.banner__center{
-    position: relative;
-}
-.banner__center .cloud__image{
-    position: absolute;
-    right: -140px;
-    top: -97px;
-}
-.banner__center .title{
-    width: 360px;
-    font-size: 43px;
-    margin-bottom: 30px;
-}
-.banner__center .counters{
-    width: 310px;
+.banner__left .counters{
     display: flex;
-    padding: 25px;
+    padding: 50px;
     box-shadow: 0px 10px 40px rgba(200, 207, 215, 0.3);
     border-radius: 20px;
     justify-content: space-between;
 }
-.banner__center .counters .counter{
+.banner__left .counters .counter{
     text-align: center;
 }
-.banner__center .counters .counter h3{
-    font-size: 15px;
+.banner__left .counters .counter h3{
+    font-size: 30px;
     color: #5956E9;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
-.banner__center .counters .counter p{
-    font-size: 9px;
+.banner__left .counters .counter p{
+    font-size: 18px;
+}
+.banner__left .counters .counter .ratings{
+    display: flex;
+    margin-bottom: 14px;
+}
+.banner__left .counters .counter .ratings li{
+    font-size: 23px;
+    margin-left: 5px;
+    color: #FFAA04;
+}
+.banner__left .counters .counter .ratings li:first-child{
+    margin-left: 0;
 }
 .banner__right{
-    width: 40%;
+    width: 50%;
 }
-.banner__image{
-    width: 360px;
-    position: relative;
-    margin: auto;
-}
-.banner__image .computer__image{
+.banner__right .banner__image img{
     width: 100%;
-}
-.banner__right .float__image{
-    position: absolute;
-    right: -28px;
-    top: -46px;
-}
-.banner__right .hand__image{
-    position: absolute;
-    bottom: 3px;
-    left: -124px;
-    width: 180px;
 }
 /*==========Feature Section CSS========================== */
 .feature__container{
     background: #27272E;
     padding-bottom: 180px;
-    background-image: url("../images/cube-mini.png");
-    background-repeat: no-repeat;
-    background-position: left 50px bottom 35px;
+    position: relative;
+}
+.feature__container::after{
+    content: url("../images/cube-mini.png");
+    position: absolute;
+    bottom: 69px;
+    left: 90px;
 }
 .feature__wrapper{
     padding: 0px 315px;
 }
 .feature__header{
     text-align: center;
-    background-image: url("../images/cube.png");
-    background-repeat: no-repeat;
-    background-position: right 50px top 95px;
     padding-top: 180px;
+    position: relative;
+}
+.feature__header::before{
+    content: url("../images/cube.png");
+    position: absolute;
+    top: 58px;
+    right: 71px;
 }
 .feature__header .fire__icon{
     width: 50px;
@@ -309,6 +266,9 @@ ul{
     border: 2px solid #3A3A44;
     border-radius: 20px;
 }
+.feature:hover{
+    background: #3A3A44;
+}
 .feature .feature__title{
     margin-top: 35px;
     margin-bottom: 25px;
@@ -318,6 +278,7 @@ ul{
     color: #ABABB5;
     font-size: 18px;
     line-height: 30px;
+    display: flex;
 }
 /* ===========POST SECTION CSS================= */
 .post__container{
@@ -342,6 +303,9 @@ ul{
 }
 .post .right{
     margin-right: 142px;
+}
+.post .post__thumb img{
+    width: 100%;
 }
 .post .post__info .subtitle{
     color: #FB849D;
@@ -410,6 +374,22 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.element .free__badgeBtn, .pro__badgeBtn{
+    padding: 4px 10px;
+    background: #E76E85;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.element .pro__badgeBtn{
+    background: #5956E9;
 }
 .element .element__icon{
     width: 80px;
@@ -816,4 +796,6 @@ ul{
 .footer__bottomWrapper .copyright__text{
     font-size: 18px;
     color: #ABABB5;
+}
+
 }
